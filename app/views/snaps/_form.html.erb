@@ -1,0 +1,32 @@
+<%= form_with(model: snap) do |form| %>
+  <% if snap.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(snap.errors.count, "error") %> prohibited this snap from being saved:</h2>
+
+      <ul>
+        <% snap.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title, class:"form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image, class:"form-control", accept:"image/*", capture:"environment" %>
+  </div>
+
+  <div>
+    <%= form.label :color, style: "display: block" %>
+    <%= form.color_field :color %>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar Snap", class:"btn btn-primary d-block w-100" %>
+  </div>
+<% end %>

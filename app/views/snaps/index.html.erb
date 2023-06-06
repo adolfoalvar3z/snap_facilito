@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Snaps comunícate Facilito</h1>
+
+<div id="snaps">
+  <% @snaps.each do |snap| %>
+    <%= render snap %>
+    <p>
+      <%= link_to "Show this snap", snap %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New snap", new_snap_path %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @snap %>
+
+<div>
+  <%= link_to "Edit this snap", edit_snap_path(@snap) %> |
+  <%= link_to "Back to snaps", snaps_path %>
+
+  <%= button_to "Destroy this snap", @snap, method: :delete %>
+</div>

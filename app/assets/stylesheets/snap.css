@@ -1,0 +1,29 @@
+body{
+    font-family: 'Monserrar', sans-serif;
+}
+
+.snap{
+    aspect-ratio: 1/1;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.snap p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.snap img{
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
